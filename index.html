@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eggman | Fresh Eggs, Delivered</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <div class="logo-icon">🥚</div>
+        <div>
+          <h1 class="logo-text">EGGMAN</h1>
+          <p class="logo-sub">FRESH EGGS, DELIVERED</p>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Delivery</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span class="icon">🔍</span>
+        <span class="icon">👤</span>
+        <div class="cart-trigger" onclick="openModal('General Inquiry')">🛒 <span id="cart-count">0</span></div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="mini-tag">FRESH • LOCAL • RELIABLE</span>
+        <h1>Farm Fresh Eggs,<br>Delivered to You</h1>
+        <p>At Eggman, we provide the freshest eggs from trusted local farms straight to your doorstep.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn btn-green">Shop Eggs</a>
+          <button class="btn btn-outline">Learn More</button>
+        </div>
+        <div class="features-row">
+          <div class="feat"><span class="check">🌿</span> 100% Fresh</div>
+          <div class="feat"><span class="check">🛡️</span> Safe & Clean</div>
+          <div class="feat"><span class="check">🚚</span> Fast Delivery</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="main-img-card">
+          <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=1200" alt="Egg Basket">
+          <div class="premium-seal">PREMIUM QUALITY</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <div class="section-title">
+      <h2>Our Egg Packs</h2>
+      <a href="#" class="view-all">View all products →</a>
+    </div>
+    
+    <div class="product-grid">
+      <div class="card">
+        <div class="img-container"><img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?w=500" alt="Regular"></div>
+        <div class="card-info">
+          <h3>Regular Pack</h3>
+          <p>10 Eggs</p>
+          <div class="price-row">
+            <span class="price">GH₵ 20.00</span>
+            <button onclick="openModal('Regular Pack')" class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img-container"><img src="https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?w=500" alt="Family"></div>
+        <div class="card-info">
+          <h3>Family Pack</h3>
+          <p>30 Eggs</p>
+          <div class="price-row">
+            <span class="price">GH₵ 55.00</span>
+            <button onclick="openModal('Family Pack')" class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card popular">
+        <span class="promo-badge">BEST VALUE</span>
+        <div class="img-container"><img src="https://images.unsplash.com/photo-1569288052389-dac9b01c9c05?w=500" alt="Bulk"></div>
+        <div class="card-info">
+          <h3>Bulk Pack</h3>
+          <p>60 Eggs</p>
+          <div class="price-row">
+            <span class="price">GH₵ 100.00</span>
+            <button onclick="openModal('Bulk Pack')" class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Finalize Order</h2>
+      <p id="selected-item"></p>
+      <form id="whatsappForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" id="hostel" placeholder="Hostel & Room" required>
+        <input type="tel" id="phone" placeholder="WhatsApp Number" required>
+        <button type="submit" class="btn btn-green full">Complete via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>Eggman | Fresh Eggs, Delivered</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,16 +18,26 @@
           <p class="logo-sub">FRESH EGGS, DELIVERED</p>
         </div>
       </div>
-      <ul class="nav-links">
+      
+      <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#products">Shop</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Delivery</a></li>
       </ul>
+
       <div class="nav-actions">
-        <span class="icon">🔍</span>
-        <span class="icon">👤</span>
-        <div class="cart-trigger" onclick="openModal('General Inquiry')">🛒 <span id="cart-count">0</span></div>
+        <span class="icon desktop-only">🔍</span>
+        <span class="icon desktop-only">👤</span>
+        <div class="cart-trigger" onclick="openModal('General Inquiry')">
+          🛒 <span id="cart-count">0</span>
+        </div>
       </div>
     </nav>
   </header>
